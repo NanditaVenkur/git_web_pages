@@ -1,4 +1,4 @@
-# My Happy Corner
+# 🌼 My Happy Corner: Github Pages Exploration
 
 A tiny one-page website for learning how to publish with GitHub Pages.
 
