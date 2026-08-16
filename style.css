@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+  color: #3f3651;
+  background: #fff7e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem 5rem;
+  background:
+    radial-gradient(circle at 15% 20%, #ffd8e5 0 8rem, transparent 8.1rem),
+    radial-gradient(circle at 85% 80%, #d8f2e3 0 10rem, transparent 10.1rem),
+    #fff7e8;
+}
+
+.card {
+  width: min(100%, 39rem);
+  padding: clamp(2rem, 7vw, 4rem);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #3f3651;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 0 #f1b8ca;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: #d8f2e3;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mascot {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  margin: 1.6rem auto 1rem;
+  border: 3px solid #3f3651;
+  border-radius: 50%;
+  background: #ffd765;
+  transition: transform 180ms ease;
+}
+
+.mascot.bounce { animation: bounce 450ms ease; }
+.eye { position: absolute; top: 2rem; width: 0.55rem; height: 0.75rem; border-radius: 50%; background: #3f3651; }
+.eye.left { left: 1.65rem; }
+.eye.right { right: 1.65rem; }
+.smile { position: absolute; left: 50%; bottom: 1.35rem; width: 1.8rem; height: 0.9rem; border-bottom: 3px solid #3f3651; border-radius: 50%; transform: translateX(-50%); }
+
+h1 { margin: 0 0 1rem; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1; }
+p { max-width: 30rem; margin: 0 auto 1.7rem; font-size: 1.08rem; line-height: 1.65; }
+
+button {
+  border: 2px solid #3f3651;
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  color: #3f3651;
+  background: #ffd765;
+  box-shadow: 4px 4px 0 #3f3651;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #3f3651; }
+button:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #3f3651; }
+button:focus-visible { outline: 4px solid #f1b8ca; outline-offset: 4px; }
+.message { min-height: 1.7rem; margin: 1.4rem auto 0; font-weight: 700; color: #9b4f6b; }
+footer { position: fixed; bottom: 1rem; padding: 0 1rem; text-align: center; font-size: 0.8rem; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  45% { transform: translateY(-14px) rotate(-5deg); }
+  70% { transform: translateY(2px) rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; }
+}
